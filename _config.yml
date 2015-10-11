@@ -1,5 +1,5 @@
 display_name: Thank You, Raul Grijalva, for Endorsing Bernie Sanders
-domainroot: http://tyraul.snook.pub/
+domainroot: http://tyraul.readytofight.org/
 
 meta:
   title: Thank You, Raul!
@@ -15,7 +15,7 @@ footer:
   copyright: "do whatever you want with this site's content, as long
   as you #FeelTheBern"
   mailto_subject: "Get Grijalva's back -- say thanks for endorsing Bernie"
-  twitter_message: "I just signed the card to thank @RepRaulGrijalva for having @BernieSanders back. Add your name: http://tyraul.snook.pub/ @Ready2FightBack"
+  twitter_message: "I just signed the card to thank @RepRaulGrijalva for having @BernieSanders back. Add your name: http://tyraul.readytofight.org @Ready2FightBack"
 
 exclude:
   - Gruntfile.js
