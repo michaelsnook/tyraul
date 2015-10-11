@@ -2931,6 +2931,9 @@ a.list-group-item-danger.active:hover, a.list-group-item-danger.active:focus {
   border: none; }
 
 /* theme from bootswatch, pick any one you like! */
+body {
+  font-weight: 400; }
+
 h1, .h1, h2, .h2, h3, .h3 {
   margin-top: 25px;
   margin-bottom: 25px; }
