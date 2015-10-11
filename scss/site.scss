@@ -1,15 +1,24 @@
 //$navbar-height: 80px;
 $navbar-border-radius:  0;
+$border-radius-base:        4px;
+$border-radius-large:       6px;
+$border-radius-small:       3px;
 $font-size-base:        18px;
-$brand-primary:         rgb(226,45,36);
-$brand-info:            rgb(38,186,196);
+$brand-primary:         #ff3f3f;
+$brand-info:            #26b0c4;
+$body-bg:               rgb(7,23,80);
+@function tint($color, $percent){
+  @return mix(white, $color, $percent);
+}
+@function shade($color, $percent){
+  @return mix(black, $color, $percent);
+}
+$well-bg:               tint($body-bg, 15%);
 @import 'variables'; /* set as part of the bootswatch theme, darkly */
 @import 'bootstrap';
 @import 'bootswatch'; /* theme from bootswatch, pick any one you like! */
 
-h1, .h1,
-h2, .h2,
-h3, .h3 {
+h1, .h1, h2, .h2, h3, .h3 {
   margin-top: ($line-height-computed);
   margin-bottom: ($line-height-computed);
 }
@@ -80,3 +89,4 @@ footer {
   margin-bottom: 0.8em;
   border-radius: 4px
 }
+.text-white { color: $text-color; }
