@@ -1,6 +1,8 @@
 //$navbar-height: 80px;
-$navbar-border-radius: 0;
-$font-size-base:          18px;
+$navbar-border-radius:  0;
+$font-size-base:        18px;
+$brand-primary:         rgb(226,45,36);
+$brand-info:            rgb(38,186,196);
 @import 'variables'; /* set as part of the bootswatch theme, darkly */
 @import 'bootstrap';
 @import 'bootswatch'; /* theme from bootswatch, pick any one you like! */
@@ -76,4 +78,5 @@ footer {
 #can_embed_form #form_col2 input[type=submit] {
   @extend .btn, .btn-lg, .btn-primary, .btn-block;
   margin-bottom: 0.8em;
+  border-radius: 4px
 }
