@@ -34,5 +34,10 @@
 
 {% include footer.html %}
 
+  <script>
+    if (document.referrer) {
+      document.getElementById('subscription_source').value = document.referrer;
+    }
+  </script>
   </body>
 </html>
