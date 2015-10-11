@@ -1,25 +1,21 @@
-display_name: Your Site's Name Here
-domainroot: http://micro.snook.pub/
-
-forms:
-  post_url: /
-  combine_names: false
-  submit_text: sign here
+display_name: Thank You, Raul Grijalva, for Endorsing Bernie Sanders
+domainroot: http://tyraul.snook.pub/
 
 meta:
-  title: Your Site's Name Here
-  description: A description of your site. Relatively short is good. Use words
-    that appear in your site. Like template repository shortcut helper library
-    html sass bootstrap theme easy painless fun.
-  keywords:
-  fb_description:
-  fb_site_name:
-  fb_title:
+  title: Thank You, Raul!
+  description: "Rep. Grijalva just endorsed Bernie Sanders for President, now he's
+  sure to take a lot of heat. Let him know we've got his back!"
+  keywords: Grijalva Sanders Endorsement
+  fb_description: "Rep. Grijalva just endorsed Bernie Sanders for President, now he's
+  sure to take a lot of heat. Let him know we've got his back!"
+  fb_site_name: Thank You, Raul Grijalva, for endorsing Bernie Sanders!
+  fb_title: Thank you, Raul
 
 footer:
-  copyright: 2015 Organization. All rights reserved. Authorised by Jane Directorstenson, 555 Boulevard Rd, Suite 555, Springfield ST.
-  mailto_subject: Here's a subject line about this campaign I'm supporting. Wee!
-  twitter_message: "Tweet tweet! Come check out this cooooool campaign. http://micro.snook.pub/ #microsite @michaelsnook"
+  copyright: "do whatever you want with this site's content, as long
+  as you #FeelTheBern"
+  mailto_subject: "Get Grijalva's back -- say thanks for endorsing Bernie"
+  twitter_message: "I just signed the card to thank @RepRaulGrijalva for having @BernieSanders back. Add your name: http://tyraul.snook.pub/ @Ready2FightBack"
 
 exclude:
   - Gruntfile.js

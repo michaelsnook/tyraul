@@ -1,18 +1,17 @@
-// Darkly 3.3.5
+// Superhero 3.3.5
 // Bootswatch
 // -----------------------------------------------------
 
-$web-font-path: "https://fonts.googleapis.com/css?family=Lato:400,700,400italic" !default;
+$web-font-path: "https://fonts.googleapis.com/css?family=Lato:300,400,700" !default;
 
-@mixin web-font($path){
-  @import url("#{$path}");
-}
-@include web-font($web-font-path);
+@import url($web-font-path);
 
 // Navbar =====================================================================
 
 .navbar {
-  border-width: 0;
+  @include box-shadow(none);
+  border: none;
+  font-size: 12px;
 
   &-default {
 
@@ -29,41 +28,35 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Lato:400,700,400italic"
       color: $navbar-inverse-bg;
     }
   }
-
-  &-brand {
-    line-height: 1;
-  }
-
-  &-form {
-    .form-control {
-      background-color: white;
-
-      &:focus {
-        border-color: white;
-      }
-    }
-  }
 }
 
 // Buttons ====================================================================
 
 .btn {
-  border-width: 2px;
-}
 
-.btn:active {
-  @include box-shadow(none);
-}
+  font-weight: 300;
 
-.btn-group.open .dropdown-toggle {
-  @include box-shadow(none);
+  &-default {
+    &:hover {
+      background-color: darken($btn-default-bg, 3%);
+    }
+  }
+
+  &-sm,
+  &-xs {
+    font-size: 12px;
+  }
 }
 
 // Typography =================================================================
 
+body {
+  font-weight: 300;
+}
+
 .text-primary,
 .text-primary:hover {
-  color: lighten($brand-primary, 10%);
+  color: $brand-primary;
 }
 
 .text-success,
@@ -86,12 +79,38 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Lato:400,700,400italic"
   color: $brand-info;
 }
 
+.page-header {
+  border-bottom-color: $table-border-color;
+}
+
+.dropdown-menu {
+
+  border: none;
+  margin: 0;
+  @include box-shadow(none);
+
+  > li > a {
+    font-size: 12px;
+    font-weight: 300;
+  }
+}
+
+.btn-group.open .dropdown-toggle {
+  @include box-shadow(none);
+}
+
+.dropdown-header {
+  font-size: 12px;
+}
+
 // Tables =====================================================================
 
 table,
 .table {
+  font-size: 12px;
 
   a:not(.btn) {
+    color: #fff;
     text-decoration: underline;
   }
 
@@ -99,17 +118,8 @@ table,
     text-decoration: none;
   }
 
-  .success,
-  .warning,
-  .danger,
-  .info {
-    color: #fff;
-
-    > th > a,
-    > td > a,
-    > a {
-      color: #fff;
-    }
+  .text-muted {
+    color: $text-muted;
   }
 
   > thead > tr > th,
@@ -118,18 +128,9 @@ table,
   > thead > tr > td,
   > tbody > tr > td,
   > tfoot > tr > td {
-    border: none;
+    border-color: transparent;
   }
-
-  &-bordered > thead > tr > th,
-  &-bordered > tbody > tr > th,
-  &-bordered > tfoot > tr > th,
-  &-bordered > thead > tr > td,
-  &-bordered > tbody > tr > td,
-  &-bordered > tfoot > tr > td {
-    border: 1px solid $table-border-color;
-  }
-}
+ }
 
 // Forms ======================================================================
 
@@ -138,15 +139,17 @@ textarea {
   color: $input-color;
 }
 
-.form-control,
-input,
-textarea {
-  border: 2px hidden transparent;
-  @include box-shadow(none);
+label,
+.radio label,
+.checkbox label,
+.help-block {
+  font-size: 12px;
+  font-weight: 300;
+}
 
-  &:focus {
-    @include box-shadow(none);
-  }
+.input-addon,
+.input-group-addon {
+  color: $text-color;
 }
 
 .has-warning {
@@ -164,13 +167,8 @@ textarea {
     color: $brand-warning;
   }
 
-  .form-control,
-  .form-control:focus {
-    @include box-shadow(none);
-  }
-
   .input-group-addon {
-    border-color: $brand-warning;
+    border: none;
   }
 }
 
@@ -189,13 +187,8 @@ textarea {
     color: $brand-danger;
   }
 
-  .form-control,
-  .form-control:focus {
-    @include box-shadow(none);
-  }
-
   .input-group-addon {
-    border-color: $brand-danger;
+    border: none;
   }
 }
 
@@ -214,18 +207,21 @@ textarea {
     color: $brand-success;
   }
 
-  .form-control,
-  .form-control:focus {
-    @include box-shadow(none);
-  }
-
   .input-group-addon {
-    border-color: $brand-success;
+    border: none;
   }
 }
 
-.input-group-addon {
-  color: $text-color;
+.form-control:focus {
+  @include box-shadow(none);
+}
+
+.has-warning,
+.has-error,
+.has-success {
+  .form-control:focus {
+    @include box-shadow(none);
+  }
 }
 
 // Navs =======================================================================
@@ -234,40 +230,44 @@ textarea {
   .open > a,
   .open > a:hover,
   .open > a:focus {
-    border-color: $nav-tabs-border-color;
+    border-color: transparent;
   }
 }
 
-.nav-tabs > li > a,
-.nav-pills > li > a {
-  color: #fff;
+.nav-tabs {
+  > li > a {
+    color: $text-color;
+  }
+}
+
+.nav-pills {
+  > li > a {
+    color: $text-color;
+  }
 }
 
 .pager {
-  a,
-  a:hover {
-    color: #fff;
+  a {
+    color: $text-color;
   }
-
-  .disabled {
-    &>a,
-    &>a:hover,
-    &>a:focus,
-    &>span {
-      background-color: $pagination-disabled-bg;
-    }
-  }
-}
-
-.breadcrumb a {
-  color: #fff;
 }
 
 // Indicators =================================================================
 
+.label {
+  font-weight: 300;
+}
+
+.alert {
+  color: #fff;
+
+  a,
+  .alert-link {
+    color: #fff;
+  }
+}
+
 .close {
-  text-decoration: none;
-  text-shadow: none;
   opacity: 0.4;
 
   &:hover,
@@ -276,23 +276,7 @@ textarea {
   }
 }
 
-.alert {
-  .alert-link {
-    color: #fff;
-    text-decoration: underline;
-  }
-}
-
 // Progress bars ==============================================================
-
-.progress {
-  height: 10px;
-  @include box-shadow(none);
-  .progress-bar {
-    font-size: 10px;
-    line-height: 10px;
-  }
-}
 
 // Containers =================================================================
 
@@ -305,7 +289,7 @@ a.list-group-item {
   &.active,
   &.active:hover,
   &.active:focus {
-    border-color: $list-group-border;
+    border: none;
   }
 
   &-success {
@@ -342,10 +326,33 @@ a.list-group-item {
   }
 }
 
-.popover {
-  color: $text-color;
+.panel {
+  border: none;
+
+  &-default > .panel-heading {
+    background-color: $table-bg-hover;
+    color: $text-color;
+  }
 }
 
-.panel-default > .panel-heading {
-  background-color: $panel-footer-bg;
+.thumbnail {
+  background-color: $well-bg;
+  border: none;
+}
+
+.modal {
+  padding: 0;
+
+  &-header,
+  &-footer {
+    background-color: $table-bg-hover;
+    border: none;
+    border-radius: 0;
+  }
+}
+
+.popover {
+  &-title {
+    border: none;
+  }
 }

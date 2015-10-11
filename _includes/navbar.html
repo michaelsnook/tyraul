@@ -1,27 +1,8 @@
 <nav class="navbar first navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <div class="nav navbar-nav">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand logo" href="#">{% include logo.svg %}</a>
-      <a class="navbar-brand title" href="#">{{ site.display_name }}</a>
-    </div>
-    </div>
-  </div>
-</nav>
-<nav class="navbar second navbar-default">
-  <div class="container-fluid">
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-
-        {% include nav-list.html %}
-
-      </ul>
+      <h1 class="hidden-xs hidden-sm">{{ site.display_name }}</h1>
+      <h3 class="hidden-lg hidden-md">{{ site.display_name }}</h3>
     </div>
   </div>
 </nav>
