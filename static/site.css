@@ -615,7 +615,7 @@ abbr[data-original-title] {
 blockquote {
   padding: 12.5px 25px;
   margin: 0 0 25px;
-  font-size: 22.5px;
+  font-size: 18px;
   border-left: 5px solid #4E5D6C; }
   blockquote p:last-child,
   blockquote ul:last-child,
@@ -2937,6 +2937,9 @@ body {
 h1, .h1, h2, .h2, h3, .h3 {
   margin-top: 25px;
   margin-bottom: 25px; }
+
+blockquote {
+  font-style: italic; }
 
 /* navbar */
 .navbar {
